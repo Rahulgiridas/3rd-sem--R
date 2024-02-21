@@ -1,0 +1,9 @@
+install.packages()
+library(scales)
+# Sample data
+
+x <- c(25, 35, 10, 5, 15)
+labels <- c("Rose", "Lotus", "Lilly", "Sunflower", "Jasmine")
+percent <- scales::percent(x / sum(x))
+# Plotting the pie chart
+pie(x, labels = percent, main = "Flowers", col = rainbow(length(x)))
